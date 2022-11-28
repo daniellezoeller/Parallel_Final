@@ -4,11 +4,15 @@
 #define MAXCOUNT 30
   
 // Function to draw mandelbrot set
-void fractal(float left, float top, float xside, float yside)
+void drawFractal(float left, float top, float xside, float yside)
 {
-    float xscale, yscale, zx, zy, cx, tempx, cy;
-    int x, y, i, j;
-    int maxx, maxy, count;
+    float xscale, yscale; //Scale of the image in x and y direction
+    float zx, zy; //WTF is this??
+    float cx, cy; //WTF is this??
+    float tempx; //??
+    int x, y; //iterators for image pixels
+    int i, j; //This literally isn't used in this function I think we can delete it
+    int maxx, maxy, count; //maximum values for x and y pixels
   
     // getting maximum value of x-axis of screen
     maxx = getmaxx();
@@ -99,7 +103,7 @@ int main()
     initgraph(&gd, &gm, driver);
   
     // Function calling
-    fractal(left, top, xside, yside);
+    drawFractal(left, top, xside, yside);
   
     getch();
   
