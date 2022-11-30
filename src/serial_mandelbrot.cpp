@@ -2,10 +2,10 @@
 #include <iostream>
 
 #include "image.h"
-#define MAXCOUNT 30
+
   
 // Function to draw mandelbrot set
-void drawFractal(float left, float top, float xside, float yside, std::string name)
+void drawFractal(float left, float top, float xside, float yside,  int depth)
 {
     float xscale, yscale; //Scale of the image in x and y direction
     float zx, zy; //same as below but for diff value
@@ -14,19 +14,15 @@ void drawFractal(float left, float top, float xside, float yside, std::string na
     int x, y; //iterators for image pixels
     int maxx, maxy, count; //maximum values for x and y pixels
     
+    maxx = 1750;
   
-    // getting maximum value of x-axis of screen
-    maxx = 1300;
-  
-    // getting maximum value of y-axis of screen
-    maxy = 750;
+    maxy = 1250;
   
     // setting up the xscale and yscale
     xscale = xside / maxx;
     yscale = yside / maxy;
   
-    // calling rectangle function
-    // where required image will be seen
+    // creating the image
     Image frac_img(maxx, maxy);
   
     // scanning every point in that rectangular area.
@@ -54,7 +50,7 @@ void drawFractal(float left, float top, float xside, float yside, std::string na
             // If you reach the Maximum number of iterations
             // and If the distance from the origin is
             // greater than 2 exit the loop
-            while ((zx * zx + zy * zy < 4) && (count < MAXCOUNT))
+            while ((zx * zx + zy * zy < 4) && (count < depth))
             {
                 // Calculate Mandelbrot function
                 // z = z*z + c where z is a complex number
@@ -88,13 +84,13 @@ int main()
     // for the screen and image to be displayed
     float left = -1.75;
     float top = -0.25;
-    float xside = 0.25;
-    float yside = 0.45;
+    float xside = 0.50;
+    float yside = 0.50;
   
     
   
     // Function calling
-    drawFractal(left, top, xside, yside, "../fracal.png");
+    drawFractal(left, top, xside, yside, 100);
   
     
   
