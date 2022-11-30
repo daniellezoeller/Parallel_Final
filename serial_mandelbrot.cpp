@@ -7,9 +7,9 @@
 void drawFractal(float left, float top, float xside, float yside)
 {
     float xscale, yscale; //Scale of the image in x and y direction
-    float zx, zy; //WTF is this??
-    float cx, cy; //WTF is this??
-    float tempx; //??
+    float zx, zy; //WTF is this?? same as below but for diff value
+    float cx, cy; //WTF is this?? I believe that this is storing values needed for mandelbrot's eq
+    float tempx; //?? needed for the mandelbrot's eq
     int x, y; //iterators for image pixels
     int i, j; //This literally isn't used in this function I think we can delete it
     int maxx, maxy, count; //maximum values for x and y pixels
