@@ -14,9 +14,9 @@ void drawFractal(float left, float top, float xside, float yside,  int depth)
     int x, y; //iterators for image pixels
     int maxx, maxy, count; //maximum values for x and y pixels
     
-    maxx = 1750;
+    maxx = 1200;
   
-    maxy = 1250;
+    maxy = 900;
   
     // setting up the xscale and yscale
     xscale = xside / maxx;
@@ -82,7 +82,7 @@ int main()
   
     // setting the left, top, xside and yside
     // for the screen and image to be displayed
-    float left = -1.75;
+    float left = -1.50;
     float top = -0.25;
     float xside = 0.50;
     float yside = 0.50;
@@ -90,7 +90,7 @@ int main()
     
   
     // Function calling
-    drawFractal(left, top, xside, yside, 100);
+    drawFractal(left, top, xside, yside, 500);
   
     
   
