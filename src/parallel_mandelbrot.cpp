@@ -26,7 +26,7 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
     // scanning every point in that rectangular area.
     // Each point represents a Complex number (x + yi).
     // Iterate that complex number
-    #pragma omp for
+    #pragma omp parallel for
     for (y = 1; y <= maxy - 1; y++) {
         for (x = 1; x <= maxx - 1; x++)
         {
