@@ -23,7 +23,7 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
   
     #pragma omp parallel for collapse (2)
     for (int i = 1; i <= y_max - 1; i++) {
-        for (int j = 1; j <= maxx - 1; j++)
+        for (int j = 1; j <= x_max - 1; j++)
         {
             c_real = j * xscale + left;
             c_imaginary = i * yscale + top;
