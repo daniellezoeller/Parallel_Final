@@ -11,7 +11,7 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
     float z_imaginary;
     float c_real;
     float c_imaginary;
-    float tempx;
+    float temp;
     int x_max = 900;
     int y_max = 900;
     int count;
@@ -25,8 +25,8 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
     for (int i = 1; i <= y_max - 1; i++) {
         for (int j = 1; j <= x_max - 1; j++)
         {
-            c_real = j * xscale + left;
-            c_imaginary = i * yscale + top;
+            c_real = j * x_scale + left;
+            c_imaginary = i * y_scale + top;
 
             z_real = 0;
             z_imaginary = 0;
@@ -35,9 +35,9 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
 
             while ((z_real * z_real + z_imaginary * z_imaginary < 4) && (count < depth))
             {
-                tempx = z_real * z_real - z_imaginary * z_imaginary + c_real;
+                temp = z_real * z_real - z_imaginary * z_imaginary + c_real;
                 z_imaginary = 2 * z_real * z_imaginary + c_imaginary;
-                z_real = tempx;
+                z_real = temp;
                 count++;
             }
 
