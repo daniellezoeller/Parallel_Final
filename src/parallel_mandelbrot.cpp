@@ -49,7 +49,6 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
 }
 
 int main(int argc, char **argv){
-
     float left = atof(argv[2]);
     float top = atof(argv[3]);
     float xside = atof(argv[4]);
