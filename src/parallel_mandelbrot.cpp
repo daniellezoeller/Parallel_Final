@@ -44,8 +44,8 @@ void drawFractals(float left, float top, float xside, float yside,  int depth, c
             frac_img.set(j, i, count);
         }
     }
+
     frac_img.write(fileName);
-    return;
 }
 
 int main(int argc, char **argv){
