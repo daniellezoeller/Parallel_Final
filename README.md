@@ -5,7 +5,7 @@ You need CMake and C++11.
 
 After installing these prerequisites, clone the repository using
 ```
-git@github.com:daniellezoeller/Parallel_Final.git
+git clone https://github.com/daniellezoeller/Parallel_Final
 ```
 
 Next, we need to set up a `build/` directory for CMake:
