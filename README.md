@@ -47,14 +47,14 @@ decrease in scale will create a more zoomed in image
 
 filename.png will decide where the image will output
 
-For example:
+Example:
 ```
 ./serial 5000 -1.5 -0.25 0.5 ../fractal.png
 ./parallel 5000 -1.5 -0.25 0.5 ../fractal.png
 ```
 The example will create a fractal image that has not been zoomed in
 
-For example:
+Example:
 ```
 ./parallel 1000 -1.32 -0.08 0.015 ../zoom.png
 ./parallel 1000 -1.317 -0.075 0.01 ../zoom2.png
