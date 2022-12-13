@@ -54,5 +54,19 @@ For example:
 ```
 The example will create a fractal image that has not been zoomed in
 
+For example:
+```
+./parallel 1000 -1.32 -0.08 0.015 ../zoom.png
+./parallel 1000 -1.317 -0.075 0.01 ../zoom2.png
+./parallel 1000 -1.314 -0.070 0.0045 ../zoom3.png
+./parallel 1000 -1.313 -0.0695 0.0015 ../zoom4.png
+./parallel 1000 -1.3123 -0.0695 0.0007 ../zoom5.png
+./parallel 1000 -1.31205 -0.0695 0.0003 ../zoom6.png
+./parallel 1000 -1.31192 -0.0695 0.00007 ../zoom7.png
+./parallel 1000 -1.31190 -0.0695 0.00004 ../zoom8.png
+```
+The example shows the example of the fractal being zoomed in
+
+
 
 
