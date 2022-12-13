@@ -1,13 +1,11 @@
-// C++ implementation for mandelbrot set fractals
-// Adapted from GeeksforGeeks 
-#include <iostream>
+//Adapted from GeeksforGeeks
 
 #include "image.h"
+#include <iostream>
 
-  
-// Function to draw mandelbrot set
-void drawFractal(float left, float top, float xside, float yside,  int depth)
-{
+using namespace std;
+
+void drawFractals(float left, float top, float xside, float yside,  int depth, const char* fileName){//will need parameters
     float xscale, yscale; //Scale of the image in x and y direction
     float zx, zy; //same as below but for diff value
     float cx, cy; //I believe that this is storing values needed for mandelbrot's eq
@@ -15,7 +13,7 @@ void drawFractal(float left, float top, float xside, float yside,  int depth)
     int x, y; //iterators for image pixels
     int maxx, maxy, count; //maximum values for x and y pixels
     
-    maxx = 1200;
+    maxx = 900;
   
     maxy = 900;
   
@@ -45,7 +43,7 @@ void drawFractal(float left, float top, float xside, float yside,  int depth)
             zy = 0;
             count = 0;
   
-            // Calculate whether c(c_real + c_imaginary) belongs
+             // Calculate whether c(c_real + c_imaginary) belongs
             // to the Mandelbrot set or not and draw a pixel
             // at coordinates (x, y) accordingly
             // If you reach the Maximum number of iterations
@@ -73,25 +71,31 @@ void drawFractal(float left, float top, float xside, float yside,  int depth)
             frac_img.set(x, y, count);
         }
     }
-    frac_img.write("../fractal.png");
+    frac_img.write(fileName);
     return;
 }
   
-// Driver code
-int main()
-{   
-  
+
+
+
+int main(int argc, char **argv){
+    
     // setting the left, top, xside and yside
     // for the screen and image to be displayed
-    float left = -1.50;
-    float top = -0.25;
-    float xside = 0.50;
-    float yside = 0.50;
+    float left = atof(argv[2]);
+    float top = atof(argv[3]);
+    float xside = atof(argv[4]);
+    float yside = atof(argv[4]);
   
     
-  
-    // Function calling
-    drawFractal(left, top, xside, yside, 500);
+    if(argc != 6){
+        std::cout << "Usage: ./parallel iterations left top scale ../outputFileName.png" << std::endl;
+    }
+    else{
+        // Function calling
+        
+        drawFractals(left, top, xside, yside, atoi(argv[1]), argv[5]);
+    }
   
     
   
