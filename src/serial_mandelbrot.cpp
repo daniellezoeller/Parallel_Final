@@ -1,4 +1,5 @@
 // C++ implementation for mandelbrot set fractals
+// Adapted from GeeksforGeeks 
 #include <iostream>
 
 #include "image.h"
