@@ -27,11 +27,11 @@ make
 ### Run the Programs
 To run the `serial_mandelbrot.cpp` program enter the following in the terminal:
 ```
-./serial iteration x-value y-value scale filename.png
+./serial iteration x-value y-value scale ../filename.png
 ```
 To run the `parallel_mandelbrot.cpp` program enter the following in the terminal:
 ```
-./parallel iteration x-value y-value scale filename.png
+./parallel iteration x-value y-value scale ../filename.png
 ```
 iteration will affect the contrast
 
